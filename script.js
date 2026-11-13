@@ -1,3 +1,15 @@
+
+/** JSDOC
+ * 
+ * @param {number} num1 
+ * @param {number} num2 
+ * @return {number} 
+ */
+function addNumbers(num1,num2)
+{
+  return num1+num2;
+}
+
 // console.log("Start");
 
 // setTimeout(() => {
@@ -28,21 +40,21 @@
 // }
 // console.log(country);
 
-var name = "John";
-let age = 30;
-const country = "USA";
+// var name = "John";
+// let age = 30;
+// const country = "USA";
 
-// This is a global scope
-console.log("Inside the block scope:");
-console.log(name); // Accessible due to var's function scope
-console.log(age); // Accessible due to let being block-scoped
-console.log(country); // Accessible due to const being block-scoped
+// // This is a global scope
+// console.log("Inside the block scope:");
+// console.log(name); // Accessible due to var's function scope
+// console.log(age); // Accessible due to let being block-scoped
+// console.log(country); // Accessible due to const being block-scoped
 
-{
-  // This is a block scope (Guest Room)
-  console.log("Inside the block scope:");
-  name = "Saman";
-  console.log(name); // Accessible due to var's function scope
-  console.log(age); // Accessible due to let being block-scoped
-  console.log(country); // Accessible due to const being block-scoped
-}
+// {
+//   // This is a block scope (Guest Room)
+//   console.log("Inside the block scope:");
+//   name = "Saman";
+//   console.log(name); // Accessible due to var's function scope
+//   console.log(age); // Accessible due to let being block-scoped
+//   console.log(country); // Accessible due to const being block-scoped
+// }
