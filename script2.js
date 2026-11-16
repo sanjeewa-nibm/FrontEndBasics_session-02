@@ -58,12 +58,36 @@ async function fetchData() {
 //     }
 // }
 
- function fetchHost() {
-    fetch("https://jsonplaceholder.typicode.com/posts/1")
-        .then(response => response.json())
-        .then(post => console.log("data fetched successfully:", post))
-        .catch(error => console.error("Error fetching data:", error))
-        .finally(() => console.log("Fetching data completed."));
+//  function fetchHost() {
+//     fetch("https://jsonplaceholder.typicode.com/posts/1")
+//         .then(response => response.json())
+//         .then(post => console.log("data fetched successfully:", post))
+//         .catch(error => console.error("Error fetching data:", error))
+//         .finally(() => console.log("Fetching data completed."));
+// }
+
+// fetchHost();
+
+function fetchData(callback) {
+    console.log("Fetching data...");
+
+    setTimeout(() => {
+      const message = "data fetched successfully"; // Simulating no error
+        const data = { id: 1, name: "John Doe" };
+        console.log("Data fetched:", data);
+        // callback(  data,message );
+        callback(null, { message, data });
+    }, 2000);
 }
 
-fetchHost();
+
+function handleData(error, result) {
+    if (error) {
+        console.error("Error fetching data:", error);
+    } else {
+        console.log("success: ", result.message);
+        console.log("data: ", result.data);
+    }
+}
+
+fetchData(handleData);
